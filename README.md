@@ -1,3 +1,11 @@
+ <h1>Required Stuff</h1>
+ 
+ <p>ffmpeg<span><i>commands: ffmpeg and ffprobe</i></span></p>
+ 
+ va_api driver
+ 
+ ubuntu/lubuntu
+ 
  <h1>Useful Stuff Below</h1>
  
  chromium --disable-gpu-driver-bug-workarounds
