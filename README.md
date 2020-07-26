@@ -1,6 +1,6 @@
  <h1>Required Stuff</h1>
  
- <p>ffmpeg<span><i>commands: ffmpeg and ffprobe</i></span></p>
+ <p>ffmpeg<span><br/><i>commands: ffmpeg and ffprobe</i></span></p>
  
  va_api driver
  
