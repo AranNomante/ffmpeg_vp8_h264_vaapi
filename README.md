@@ -6,15 +6,16 @@
  
  <b>Make sure vainfo does not output any errors and env_setup is set properly to enable hardware acceleration</b>
  
- <h1>Required Stuff</h1>
+ <h1>Must have</h1>
  
- <p>ffmpeg<span><br/><i>commands: ffmpeg and ffprobe</i></span></p>
+ <span><i>commands: ffmpeg and ffprobe</i></span>
  
- va_api driver
- 
- linux os
+ va_api driver *<i>(if you do not have an external gpu, exclude this when using env_setup)</i>
  
  <h1>Useful Stuff Below</h1>
+ If you cannot enable hardware acceleration try using the following commands:
+ 
+ chromium --minimal
  
  chromium --disable-gpu-driver-bug-workarounds
  
