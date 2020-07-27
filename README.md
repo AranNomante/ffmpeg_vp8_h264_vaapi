@@ -8,7 +8,7 @@
  
  va_api driver
  
- ubuntu/lubuntu
+ linux os
  
  <h1>Useful Stuff Below</h1>
  
