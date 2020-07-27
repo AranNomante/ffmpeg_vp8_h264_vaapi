@@ -1,3 +1,7 @@
+ <h1><b>IMPORTANT</b></h1>
+ 
+ <b>h264 scripts are configured properly but vp-8 scripts aren't, be advised.</b> 
+ 
  <h1>Required Stuff</h1>
  
  <p>ffmpeg<span><br/><i>commands: ffmpeg and ffprobe</i></span></p>
