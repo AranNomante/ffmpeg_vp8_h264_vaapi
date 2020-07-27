@@ -4,8 +4,7 @@
  
  <b>All scripts are configured properly. Hardware accelerated script has not been tested</b> 
  
- <b>Make sure vainfo does not output any errors and env_setup is set properly to enable hardware acceleration</b>
- &nbsp<i>skip if you do not have an external gpu</i>
+ <b>Make sure vainfo does not output any errors and env_setup is set properly to enable hardware acceleration <i>skip if you do not have an external gpu</i></b>
  
  <h1>Must have</h1>
  
