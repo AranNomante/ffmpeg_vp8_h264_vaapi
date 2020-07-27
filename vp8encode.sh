@@ -8,7 +8,9 @@
 #for fast/quality use realtime 6-7 
 #for very good quality use good 2
 start=$(date +%s.%N)
-ffmpeg -i $1 -r 30 -g 90 -s 1280x720 -aspect 16:9 -c:v libvpx-vp9 -deadline $2 -row-mt 1 -b:v 2500k -threads $5 -tile-columns $4 -cpu-used $3 -maxrate 3000k -crf 30 -frame-parallel 1 $6.webm
+ffmpeg -i $1 -r 30 -g 90 -s 1280x720 -aspect 16:9 -c:v libvpx -deadline $2 -row-mt 1 -b:v 2500k -threads $5 -tile-columns $4 -cpu-used $3 -maxrate 3000k -crf 30 -frame-parallel 1 $6.webm
+
 duration=$(echo "$(date +%s.%N) - $start" | bc)
 execution_time=`printf "%.2f seconds" $duration`
 echo "Script Execution Time: $execution_time"
+mv $6.webm $6.mp4
