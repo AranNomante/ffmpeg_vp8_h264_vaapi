@@ -2,7 +2,7 @@
 
  <h3>This repository is about transcoding performance and chromium video decoder performance improvements</h3>
  
- <b>h264 scripts are configured properly but vp-8 scripts aren't, be advised.</b> 
+ <b>All scripts are configured properly. Hardware accelerated script has not been tested</b> 
  
  <h1>Required Stuff</h1>
  

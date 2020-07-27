@@ -1,0 +1,50 @@
+sudo bash ffmpeg_vp8_h264_vaapi/img_n_duration.sh ball.webm 1
+ffmpeg version 4.3-3+b1 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 9 (Debian 9.3.0-14)
+  configuration: --prefix=/usr --extra-version=3+b1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 51.100 / 56. 51.100
+  libavcodec     58. 91.100 / 58. 91.100
+  libavformat    58. 45.100 / 58. 45.100
+  libavdevice    58. 10.100 / 58. 10.100
+  libavfilter     7. 85.100 /  7. 85.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  7.100 /  5.  7.100
+  libswresample   3.  7.100 /  3.  7.100
+  libpostproc    55.  7.100 / 55.  7.100
+Input #0, matroska,webm, from 'ball.webm':
+  Metadata:
+    COMPATIBLE_BRANDS: isomiso2avc1mp41
+    MAJOR_BRAND     : isom
+    MINOR_VERSION   : 512
+    ENCODER         : Lavf58.45.100
+  Duration: 00:00:45.49, start: -0.007000, bitrate: 2333 kb/s
+    Stream #0:0: Video: vp8, yuv420p(progressive), 1920x1080, SAR 1:1 DAR 16:9, 120 fps, 120 tbr, 1k tbn, 1k tbc (default)
+    Metadata:
+      HANDLER_NAME    : VideoHandler
+      ENCODER         : Lavc58.91.100 libvpx
+      DURATION        : 00:00:45.357000000
+    Stream #0:1: Audio: opus, 48000 Hz, stereo, fltp (default)
+    Metadata:
+      HANDLER_NAME    : SoundHandler
+      ENCODER         : Lavc58.91.100 libopus
+      DURATION        : 00:00:45.494000000
+File 'thumbnail' already exists. Overwrite? [y/N] y
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp8 (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x562e21c91ac0] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to 'thumbnail':                                                                                 
+  Metadata:
+    COMPATIBLE_BRANDS: isomiso2avc1mp41
+    MAJOR_BRAND     : isom
+    MINOR_VERSION   : 512
+    encoder         : Lavf58.45.100
+    Stream #0:0: Video: mjpeg, yuvj420p(pc), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 120 fps, 120 tbn, 120 tbc (default)
+    Metadata:
+      HANDLER_NAME    : VideoHandler
+      DURATION        : 00:00:45.357000000
+      encoder         : Lavc58.91.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=8.7 Lsize=N/A time=00:00:00.00 bitrate=N/A dup=1 drop=1 speed=0.0345x    
+video:36kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
