@@ -4,6 +4,8 @@
  
  <b>All scripts are configured properly. Hardware accelerated script has not been tested</b> 
  
+ <b>Make sure vainfo does not output any errors and env_setup is set properly to enable hardware acceleration</b>
+ 
  <h1>Required Stuff</h1>
  
  <p>ffmpeg<span><br/><i>commands: ffmpeg and ffprobe</i></span></p>
