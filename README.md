@@ -32,3 +32,5 @@ https://www.linuxuprising.com/2018/08/how-to-enable-hardware-accelerated.html
 http://lifestyletransfer.com/how-to-install-gstreamer-vaapi-plugins-on-ubuntu/
 
 https://developer.nvidia.com/nvidia-video-codec-sdk
+
+https://www.binarytides.com/linux-get-gpu-information/
