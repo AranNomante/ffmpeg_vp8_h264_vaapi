@@ -36,3 +36,5 @@ http://lifestyletransfer.com/how-to-install-gstreamer-vaapi-plugins-on-ubuntu/
 https://developer.nvidia.com/nvidia-video-codec-sdk
 
 https://www.binarytides.com/linux-get-gpu-information/
+
+https://www.techpowerup.com/gpu-specs/
