@@ -1,5 +1,7 @@
  <h1><b>IMPORTANT</b></h1>
-
+ 
+ <h2>vp8auto.sh is maintained rest are not for the time being</h2>
+ 
  <h3>This repository is about transcoding performance and chromium video decoder performance improvements</h3>
  
  <b>All scripts are configured properly. Hardware accelerated script has not been tested</b> 
