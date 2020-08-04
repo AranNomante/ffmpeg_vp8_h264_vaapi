@@ -23,6 +23,8 @@
  
  chromium --disable-gpu
 
+https://trac.ffmpeg.org/wiki/Encode/VP8
+
 https://trac.ffmpeg.org/wiki/Encode/VP9#constantq
 
 https://peter.sh/experiments/chromium-command-line-switches/
