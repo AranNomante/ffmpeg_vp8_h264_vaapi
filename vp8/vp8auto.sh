@@ -69,6 +69,7 @@ then
 	resolution=${ORIENT[1]}x${ORIENT[0]};
 	IFS=' '
 	aspect=9:16;
+fi
 #invert resolution if passed as command
 #inputs in order filename,tilecols,numcores,outfile,bvrate,bufsize,fps,resolution
 echo "OUTPUT SPECIFICS:";
