@@ -25,7 +25,7 @@
 
 https://trac.ffmpeg.org/wiki/Encode/VP8
 
-https://trac.ffmpeg.org/wiki/Encode/VP9#constantq
+https://trac.ffmpeg.org/wiki/Encode/VP9
 
 https://peter.sh/experiments/chromium-command-line-switches/
 
