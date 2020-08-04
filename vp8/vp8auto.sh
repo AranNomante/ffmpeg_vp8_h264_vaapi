@@ -1,7 +1,27 @@
 # $1 ifilename $2 outfilename $3 orientation 0: default 1:horizontal
 echo $0;
 starttime=$(date +%s);
+echo "checking video integrity";
+ffmpeg -v error -i $1 -f null - 2>error.log
+lines=$(wc -l error.log);
+IFS=' '
+read -ra LINES <<< "$lines"
+lines=${LINES[0]};
+rm error.log
+if [ $lines -gt 0 ]
+then
+	echo "$lines errors found.";
+	echo "initiating fix procedure";
+	ffmpeg -i $1 -c copy repaired.mp4
+	rm $1
+	mv repaired.mp4 $1
+	echo "fix procedure finished";
+fi
+echo "video check finished";
+echo "analysing video";
 eval $(ffprobe -v quiet -show_format -of flat=s=_ -show_entries stream=r_frame_rate,height,nb_frames,duration,codec_name $1);
+echo "video analysis finished";
+echo "preparing for conversion";
 rfps=${streams_stream_0_r_frame_rate};
 height=${streams_stream_0_height};
 bitrate=$((${format_bit_rate}/1000));
@@ -67,16 +87,19 @@ then
 	IFS='x'
 	read -ra ORIENT <<< "$resolution"
 	resolution=${ORIENT[1]}x${ORIENT[0]};
-	IFS=' '
 	aspect=9:16;
 fi
+IFS=' '
 #invert resolution if passed as command
 #inputs in order filename,tilecols,numcores,outfile,bvrate,bufsize,fps,resolution
 echo "OUTPUT SPECIFICS:";
 echo "-----------------";
-echo $filename,$tilecols,$numcores,$gop,$outfile,$bvrate,$bufsize,$fps,$resolution;
+echo $filename,$tilecols,$numcores,$gop,$outfile,$bvrate,$bufsize,$fps,$resolution,$aspect;
 echo "-----------------";
-ffmpeg -i $filename -r $fps -g $gop -s $resolution -aspect $aspect -c:v libvpx -deadline good -row-mt 1 -b:v $bvrate -threads $numcores -tile-columns $tilecols -cpu-used 2 -bufsize $bufsize  -crf 5 -frame-parallel 1 $outfile.webm
+echo "preperation finished";
+echo "starting conversion";
+ffmpeg -loglevel level+info -i $filename -r $fps -g $gop -s $resolution -aspect $aspect -c:a libvorbis -c:v libvpx -deadline good -row-mt 1 -b:v $bvrate -minrate 512k -maxrate 4500k -threads $numcores -tile-columns $tilecols -cpu-used 2 -bufsize $bufsize  -crf 5 -frame-parallel 1 $outfile.webm
+echo "conversion finished";
 endtime=$(date +%s);
 dif=$(( $endtime - $starttime ));
 echo "It takes $dif seconds to complete this task...";
