@@ -30,6 +30,7 @@ duration=${streams_stream_0_duration};
 duration=${duration%.*};
 echo "INPUT SPECIFICS:";
 echo "----------------";
+echo "fps,height,bitrate,codec,duration";
 echo $rfps,$height,$bitrate,$codec,$duration;
 echo "----------------";
 cores=$(cat /proc/cpuinfo 2>&1 | grep cores | awk 'NR == 1');
@@ -94,6 +95,7 @@ IFS=' '
 #inputs in order filename,tilecols,numcores,outfile,bvrate,bufsize,fps,resolution
 echo "OUTPUT SPECIFICS:";
 echo "-----------------";
+echo "filename,tile columns,cores,gop,outfile,bvrate,bufsize,fps,resolution,aspect ratio";
 echo $filename,$tilecols,$numcores,$gop,$outfile,$bvrate,$bufsize,$fps,$resolution,$aspect;
 echo "-----------------";
 echo "preperation finished";
