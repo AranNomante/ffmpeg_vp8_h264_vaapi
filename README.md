@@ -15,6 +15,19 @@
  va_api driver *<i>(if you do not have an external gpu, exclude this when using env_setup)</i>
  
  <h1>Useful Stuff Below</h1>
+
+$ less /var/log/Xorg.0.log
+
+$ journalctl -b
+
+$ dmesg | less
+
+$ less ~/.xsession-errors
+
+sudo cpupower frequency-set --governor=performance
+
+sudo x86_energy_perf_policy -t 1 performance
+
  If you cannot enable hardware acceleration try using the following commands:
  
  chromium --minimal
@@ -38,3 +51,5 @@ https://developer.nvidia.com/nvidia-video-codec-sdk
 https://www.binarytides.com/linux-get-gpu-information/
 
 https://www.techpowerup.com/gpu-specs/
+
+
