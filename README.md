@@ -24,7 +24,7 @@ $ dmesg | less
 
 $ less ~/.xsession-errors
 
-sudo cpupower frequency-set --governor=performance
+sudo cpupower frequency-set --governor performance
 
 sudo x86_energy_perf_policy -t 1 performance
 
