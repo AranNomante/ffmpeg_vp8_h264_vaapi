@@ -75,7 +75,7 @@ then
 	resolution=1280x720;
 elif [ $height -ge 480 ]
 then
-	resolution=720x480;
+	resolution=854x480;
 else
 	resolution=640x360;
 fi
