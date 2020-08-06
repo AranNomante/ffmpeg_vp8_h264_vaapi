@@ -1,0 +1,5 @@
+In /etc/pulse/
+in both system.pa and default.pa comment line:
+load-module module-suspend-on-idle
+in default.pa add line(set-default-sink <target>):
+set-default-sink alsa_output.pci-0000_00_02.0-platform-hdmi-lpe-audio.hdmi-stereo-extra2
