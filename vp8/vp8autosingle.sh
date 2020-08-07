@@ -1,4 +1,5 @@
 # $1 ifilename $2 outfilename $3 orientation 0: default 1:horizontal
+set -e;#exit on any command fail
 echo $0;
 starttime=$(date +%s);
 echo "checking video integrity";
@@ -15,6 +16,17 @@ then
 	ffmpeg -i $1 -c copy repaired.mp4
 	rm $1
 	mv repaired.mp4 $1
+	ffmpeg -v error -i $1 -f null - 2>error.log
+	lines=$(wc -l error.log);
+	IFS=' '
+	read -ra LINES <<< "$lines"
+	lines=${LINES[0]};
+	rm error.log
+	if [ $lines -gt 0 ]
+	then
+		echo "Input couldn't be fixed";
+		exit 1
+	fi
 	echo "fix procedure finished";
 fi
 echo "video check finished";
