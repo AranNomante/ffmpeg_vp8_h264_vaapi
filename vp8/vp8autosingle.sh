@@ -19,8 +19,8 @@ then
 	ffmpeg -v error -i $1 -f null - 2>error.log
 	lines=$(wc -l error.log);
 	IFS=' '
-	read -ra LINES <<< "$lines"
-	lines=${LINES[0]};
+	read -ra LINESS <<< "$lines"
+	lines=${LINESS[0]};
 	rm error.log
 	if [ $lines -gt 0 ]
 	then
