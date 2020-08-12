@@ -8,7 +8,7 @@
 #
 # In order to enable or disable this script just change the execution
 # bits.
-#
+#sudo systemctl status rc-local
 # By default this script does nothing.
 
 exit 0
