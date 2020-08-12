@@ -1,0 +1,8 @@
+select s.name,count(e.id) as enterCount,date_format(e.record_date, '%Y.%m.%d' ) 
+as record_date, 
+WEEK(e.record_date) - WEEK((SELECT date_add(date_add(LAST_DAY(e.record_date),interval 1 DAY),interval -1 MONTH) 
+AS first_day)) as week 
+from entrance e, store_new s, device_new d
+where s.id=d.store_id and d.type='enter' and e.device_id = d.id and e.action_type=1 
+and s.group_id= 99 and e.record_date between '2020-07-26' and '2020-08-11' and s.id not in () 
+group by date_format(e.record_date, '%Y.%m.%d' ),name order by date_format(e.record_date, '%Y.%m.%d' ) asc 
