@@ -26,9 +26,9 @@ $ less ~/.xsession-errors
 
 $ cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
-sudo cpupower frequency-set --governor performance
+$ sudo cpupower frequency-set --governor performance
 
-sudo x86_energy_perf_policy -t 1 performance
+$ sudo x86_energy_perf_policy -t 1 performance
 
  If you cannot enable hardware acceleration try using the following commands:
  
@@ -54,4 +54,5 @@ https://www.binarytides.com/linux-get-gpu-information/
 
 https://www.techpowerup.com/gpu-specs/
 
+https://askubuntu.com/questions/1021748/set-cpu-governor-to-performance-in-18-04
 
